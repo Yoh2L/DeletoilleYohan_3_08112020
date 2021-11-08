@@ -13,8 +13,8 @@ ul {
   list-style: none;
 }
 
-button, input, select { 
-  margin: 0; 
+button, input, select {
+  margin: 0;
 }
 
 html {
@@ -41,6 +41,62 @@ table {
 
 td, th {
   padding: 0;
+}
+
+/* Colors */
+/* Font weight */
+.explore-button {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12);
+  font-family: "Roboto";
+  font-weight: 400;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  background: #eaeaea;
+}
+.localisation .position-ville {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.teaser {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem 3rem 5rem 3rem;
+  gap: 1rem;
+  background: #f6f6f6;
+}
+.teaser .teaser-str {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+.teaser .teaser-low {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

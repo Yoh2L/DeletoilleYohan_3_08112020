@@ -1,0 +1,43 @@
+@use '../utils/variables' as v;
+
+
+.localisation{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    background: v.$clr-grey2;
+
+        .position-ville{
+            font-family: "Roboto";
+            font-weight: 400;
+        }
+}
+
+.teaser{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem 3rem 5rem 3rem;
+    gap: 1rem;
+    background: v.$clr-grey1;
+
+        .teaser-str{
+            font-family: "Roboto";
+            font-weight: v.$clr-strong;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .teaser-low{
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        
+}

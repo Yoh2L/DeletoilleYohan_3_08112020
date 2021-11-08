@@ -1,0 +1,41 @@
+@use '../utils/variables' as v;
+
+footer{
+    background: v.$clr-grey3;
+    padding: 2rem;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: "Roboto";
+        font-weight: v.$clr-medium;
+        color: white;
+
+        .footer-li{
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+}
+
+.logo-footer{
+    filter: brightness(2000%);
+    height: 16px;
+    margin-bottom: 1rem;
+
+}
+
+.footer-icon{
+    width: 16px;
+}
+
+.hand-shake{
+    font-size: 12px;
+}
+
+.footer-txt-thin{
+    font-weight: v.$clr-thin;
+
+}

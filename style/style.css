@@ -56,6 +56,58 @@ td, th {
   color: white;
 }
 
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-decoration: none;
+  background: white;
+  height: 250px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.08);
+}
+.restaurant-card .restaurant-card-img {
+  object-fit: cover;
+  height: calc(100% - 60px);
+}
+.restaurant-card .restaurant-card-down-area {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-card .restaurant-card-down-area .restaurant-card-txt {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: black;
+  font-family: "Roboto";
+}
+.restaurant-card .restaurant-card-down-area .restaurant-card-txt .card-txt-strong {
+  font-weight: 700;
+  font-size: 18px;
+}
+.restaurant-card .restaurant-card-down-area .restaurant-card-txt .card-txt-medium {
+  font-size: 14px;
+}
+.restaurant-card .restaurant-card-down-area .restaurant-card-heart {
+  font-size: 1.4rem;
+  color: #353535;
+}
+.restaurant-card .restaurant-card-new {
+  position: absolute;
+  background: #99e2d0;
+  color: #008766;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.6rem;
+  font-family: "Roboto";
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -88,6 +140,7 @@ footer ul .footer-li {
 
 .footer-icon {
   width: 16px;
+  font-size: 14px;
 }
 
 .hand-shake {
@@ -104,6 +157,7 @@ footer ul .footer-li {
   padding: 1rem;
   gap: 1rem;
   background: #eaeaea;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 .localisation .position-ville {
   font-family: "Roboto";
@@ -129,7 +183,7 @@ footer ul .footer-li {
 }
 .teaser .teaser-low {
   font-family: "Roboto";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   text-align: center;
   margin-bottom: 20px;
@@ -150,7 +204,7 @@ footer ul .footer-li {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 1.2rem 0;
   background: #f6f6f6;
   text-decoration: none;
   border-radius: 25px;
@@ -162,7 +216,8 @@ footer ul .footer-li {
   width: 25px;
   border-radius: 50%;
   background-color: #9356DC;
-  margin-left: -30px;
+  left: 0%;
+  transform: translate(-50%);
 }
 .goal .goal-btn .gl-btn-nb span {
   position: absolute;
@@ -173,11 +228,26 @@ footer ul .footer-li {
 }
 .goal .goal-btn .gl-btn-icon {
   color: #7e7e7e;
+  font-size: 1.2rem;
 }
 .goal .goal-btn .gl-btn-txt {
   color: black;
   font-family: "Roboto";
   font-weight: 700;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+.restaurants .restaurant-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

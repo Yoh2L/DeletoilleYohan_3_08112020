@@ -1,6 +1,31 @@
+@use '../utils/variables' as v;
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+}
+
+#header-logo{
+    margin: 0.8rem 0rem;
+}
+
+.header-restaurant{
+    padding: 0.5rem 1rem;
+
+    .left-arrow{
+        text-decoration: none;
+        position: absolute;
+        left: 2rem;
+        top: 1.6rem;
+    }
+    .left-arrow:link, .left-arrow:visited{
+        color: black;
+    }
+
+        .title-header{
+            font-family: "Shrikhand";
+            font-weight: v.$clr-medium;
+            font-size: 2rem;
+        }
 }

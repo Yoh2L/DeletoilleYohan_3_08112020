@@ -1,1 +1,64 @@
 @use '../utils/variables' as v;
+
+.restaurant-img-bg{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+
+}
+
+.restaurant-page-title{
+    display: flex;
+    position: relative;
+    margin-top: -25px;
+    background-color: v.$clr-grey1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+
+        .rpt-txt{
+            font-family: "Shrikhand";
+            font-weight: v.$clr-medium;
+            font-size: 1.6rem;
+        }
+
+        .restaurant-heart{
+            font-size: 1.5rem;
+            font-weight: v.$clr-thin;
+        }
+    
+}
+
+.restaurant-page-body{
+    background-color: v.$clr-grey1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.restaurant-page-titre{
+    font-family: "Roboto";
+    font-weight: v.$clr-thin;
+
+}
+
+.restaurant-page-titre::after{
+    content: "";
+    display: block;
+    margin-top: 0.3rem;
+    width: 12%;
+    border-bottom: 4px solid v.$clr-green1;
+
+}
+
+.restaurant-page-order{
+    background-color: v.$clr-grey1;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+

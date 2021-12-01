@@ -77,11 +77,20 @@ td, th {
   text-decoration: none;
   background: white;
   height: 250px;
+  width: 100%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .restaurant-card {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
 }
 .restaurant-card .restaurant-card-img {
   object-fit: cover;
   height: calc(100% - 60px);
+  width: 100%;
 }
 .restaurant-card .restaurant-card-down-area {
   display: flex;
@@ -123,7 +132,9 @@ td, th {
 .card-food {
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 1rem;
+  height: 65px;
+  max-width: 500px;
+  overflow: hidden;
   margin-top: 1rem;
   background-color: white;
   border-radius: 20px;
@@ -131,21 +142,101 @@ td, th {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 4px rgba(0, 0, 0, 0.04);
 }
 
-.card-food-txt {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
+.card-food-description {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.8rem;
 }
 
-.card-food-txt-bold {
+.card-food-txt-down {
+  display: flex;
+  width: 100%;
+}
+.card-food-txt-down span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 {
   font-size: 18px;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .card-food-price {
   display: flex;
   align-items: flex-end;
   font-weight: 700;
+}
+
+.card-food-anim {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #99e2d0;
+  color: white;
+  width: 60px;
+  margin-right: -60px;
+  transition: margin 500ms ease-in-out;
+}
+
+.card-food:hover .card-food-anim {
+  margin-right: 0;
+}
+
+.card-food:hover .fa-check-circle {
+  transform: rotate(0deg);
+}
+
+.fa-check-circle {
+  transition: 800ms ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.rpt-heart {
+  position: relative;
+  height: 2rem;
+  overflow: hidden;
+  width: 40px;
+}
+
+.restaurant-heart1 {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  color: black;
+}
+
+.rpt-span-heart {
+  max-height: 0;
+  transition: max-height 1s ease-in-out;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.restaurant-heart2 {
+  position: relative;
+  transform: translateY(-100%);
+  transition: transform 1s ease-in-out;
+  color: #FF79DA;
+  font-size: 2rem;
+}
+
+.rpt-heart:hover .rpt-span-heart {
+  max-height: 2rem;
+}
+
+.rpt-heart:hover .restaurant-heart2 {
+  transform: translateY(0);
 }
 
 header {
@@ -211,6 +302,11 @@ footer ul .footer-li {
 .footer-txt-thin {
   font-weight: 300;
 }
+.footer-txt-thin a {
+  color: inherit;
+  font-style: inherit;
+  text-decoration: none;
+}
 
 .localisation {
   display: flex;
@@ -250,16 +346,31 @@ footer ul .footer-li {
   margin-bottom: 20px;
 }
 
+.goal-txt {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  padding: 2rem 2rem 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  .goal-txt {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .goal {
   display: flex;
   flex-direction: column;
   padding: 2rem 2rem;
   gap: 2rem;
 }
-.goal .goal-txt {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 24px;
+@media screen and (min-width: 768px) {
+  .goal {
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+  }
 }
 .goal .goal-btn {
   display: flex;
@@ -305,10 +416,26 @@ footer ul .footer-li {
   width: 100%;
   gap: 2rem;
 }
-.restaurants .restaurant-title {
+@media screen and (min-width: 768px) {
+  .restaurants {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.restaurant-title {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 1.5rem;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 2rem 2rem 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-title {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .restaurant-img-bg {
@@ -319,23 +446,19 @@ footer ul .footer-li {
 
 .restaurant-page-title {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   position: relative;
   margin-top: -25px;
   background-color: #f6f6f6;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding: 1rem 1.5rem;
-  align-items: center;
-  justify-content: space-between;
 }
 .restaurant-page-title .rpt-txt {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 1.6rem;
-}
-.restaurant-page-title .restaurant-heart {
-  font-size: 1.5rem;
-  font-weight: 300;
 }
 
 .restaurant-page-body {
@@ -344,6 +467,13 @@ footer ul .footer-li {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-page-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .restaurant-page-titre {

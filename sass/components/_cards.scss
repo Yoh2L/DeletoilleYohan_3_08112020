@@ -12,12 +12,20 @@
     text-decoration: none;
     background: white;
     height: 250px;
+    width: 100%;
     box-shadow: 0 4px 4px rgba(0,0,0,0.08),
                 0 6px 6px rgba(0,0,0,0.08);
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }
 
     .restaurant-card-img{
         object-fit: cover;
         height: calc(100% - 60px);
+        width: 100%;
     }
 
     .restaurant-card-down-area{

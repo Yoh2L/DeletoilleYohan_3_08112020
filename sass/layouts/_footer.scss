@@ -39,4 +39,10 @@ footer{
 .footer-txt-thin{
     font-weight: v.$clr-thin;
 
+    a{
+        color: inherit;
+        font-style: inherit;
+        text-decoration: none;
+    }
+
 }

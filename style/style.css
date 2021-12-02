@@ -362,10 +362,11 @@ footer ul .footer-li {
 .goal {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2rem 2rem;
   gap: 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .goal {
     flex-direction: row;
     flex: 1;
@@ -380,6 +381,7 @@ footer ul .footer-li {
   background: #f6f6f6;
   text-decoration: none;
   border-radius: 25px;
+  width: 280px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
 }
 .goal .goal-btn .gl-btn-nb {
@@ -411,15 +413,18 @@ footer ul .footer-li {
 .restaurants {
   background-color: #f6f6f6;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 100%;
   gap: 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .restaurants {
-    flex-direction: row;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -468,7 +473,7 @@ footer ul .footer-li {
   flex-direction: column;
   gap: 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .restaurant-page-body {
     display: flex;
     flex-direction: row;
@@ -485,7 +490,7 @@ footer ul .footer-li {
   content: "";
   display: block;
   margin-top: 0.3rem;
-  width: 12%;
+  width: 50px;
   border-bottom: 4px solid #99e2d0;
 }
 
@@ -495,6 +500,18 @@ footer ul .footer-li {
   justify-content: center;
   padding-top: 2rem;
   padding-bottom: 3rem;
+}
+
+.restaurant-page-entrees {
+  width: 100%;
+}
+
+.restaurant-page-plats {
+  width: 100%;
+}
+
+.restaurant-page-desserts {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

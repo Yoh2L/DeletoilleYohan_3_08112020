@@ -33,7 +33,7 @@
     flex-direction: column;
     gap: 2rem;
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -50,7 +50,7 @@
     content: "";
     display: block;
     margin-top: 0.3rem;
-    width: 12%;
+    width: 50px;
     border-bottom: 4px solid v.$clr-green1;
 
 }
@@ -63,3 +63,13 @@
     padding-bottom: 3rem;
 }
 
+
+.restaurant-page-entrees{
+    width: 100%;
+}
+.restaurant-page-plats{
+    width: 100%;
+}
+.restaurant-page-desserts{
+    width: 100%;
+}

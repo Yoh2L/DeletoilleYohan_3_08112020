@@ -57,10 +57,11 @@
 .goal{
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 2rem 2rem;
     gap: 2rem;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         flex-direction: row;
         flex: 1;
         justify-content: center;
@@ -75,6 +76,7 @@
         background: v.$clr-grey1;
         text-decoration: none;
         border-radius: 25px;
+        width: 280px;
         box-shadow: 0 4px 4px rgba(0,0,0,0.08), 
                     0 8px 8px rgba(0,0,0,0.08);
         
@@ -113,15 +115,17 @@
 .restaurants{
     background-color: v.$clr-grey1;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
     gap: 2rem;
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        justify-content: center;
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
     }
+    @media screen and (min-width: 1440px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 
 .restaurant-title{

@@ -112,6 +112,12 @@
     }
 }
 
+.goal-btn:hover{
+    background: lighten(v.$clr-grey1, 2);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.08), 
+                0 12px 12px rgba(0,0,0,0.08);
+}
+
 .restaurants{
     background-color: v.$clr-grey1;
     padding: 2rem;

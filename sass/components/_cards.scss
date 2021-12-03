@@ -72,3 +72,11 @@
     }   
 
 }
+
+.restaurant-card:hover{
+    transform: scale(1.02);
+    transition: transform ease-in-out 200ms;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.08),
+                0 10px 10px rgba(0,0,0,0.08);
+
+}

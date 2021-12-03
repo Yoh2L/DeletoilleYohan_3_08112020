@@ -16,6 +16,13 @@
 
 }
 
+.explore-button:hover{
+    background: linear-gradient(to bottom right, v.$clr-primary, v.$clr-secondary);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.12), 
+}
+
+
+
 .order-button{
     background:linear-gradient(to bottom right, v.$clr-secondary, v.$clr-primary);
     text-decoration: none;
@@ -29,4 +36,9 @@
     font-size: 18px;
     padding: 1rem 3rem;
     color: white;
+}
+
+.order-button:hover{
+    background: linear-gradient(to bottom right, v.$clr-primary, v.$clr-secondary);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.12), 
 }

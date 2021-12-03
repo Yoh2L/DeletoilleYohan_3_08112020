@@ -4,6 +4,13 @@ footer{
     background: v.$clr-grey3;
     padding: 2rem;
 
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
     ul{
         display: flex;
         flex-direction: column;
@@ -11,6 +18,12 @@ footer{
         font-family: "Roboto";
         font-weight: v.$clr-medium;
         color: white;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
 
         .footer-li{
             display: flex;

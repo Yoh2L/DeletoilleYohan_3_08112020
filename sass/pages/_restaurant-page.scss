@@ -33,12 +33,15 @@
     flex-direction: column;
     gap: 2rem;
     
+
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
 }
+
+
 
 .restaurant-page-titre{
     font-family: "Roboto";
@@ -66,10 +69,34 @@
 
 .restaurant-page-entrees{
     width: 100%;
+    animation: 2s forwards ease-in-out SlideUp;
 }
 .restaurant-page-plats{
     width: 100%;
+    opacity: 0;
+    animation: 2s forwards ease-in-out SlideUp;
+    animation-delay: 0.5s;
 }
 .restaurant-page-desserts{
     width: 100%;
+    opacity: 0;
+    animation: 2s forwards ease-in-out SlideUp;
+    animation-delay: 1s;
+}
+
+@keyframes SlideUp {
+    0%{
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+
 }

@@ -42,10 +42,7 @@
             color: black;
             font-family: "Roboto";
 
-            .card-txt-strong{
-                font-weight: v.$clr-strong;
-                font-size: 18px;
-            }
+
             .card-txt-medium{
                 font-size: 14px;
             }
@@ -79,4 +76,9 @@
     box-shadow: 0 8px 8px rgba(0,0,0,0.08),
                 0 10px 10px rgba(0,0,0,0.08);
 
+}
+
+h4{
+    font-weight: v.$clr-strong;
+    font-size: 18px;
 }

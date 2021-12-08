@@ -1,5 +1,54 @@
 @use '../utils/variables' as v;
 
+/* Animation du coeur des cartes de la page principale */
+
+.home-heart{
+    position: relative;
+    height: 1.4rem;
+    overflow: hidden;
+    width: 25px;
+}
+
+.home-heart1{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.4rem;
+    color: v.$clr-grey3;
+}
+
+.home-span-heart{
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+.home-heart2{
+    position: relative;
+    transform: translateY(-100%);
+    transition: transform 1s ease-in-out;
+    font-size: 1.4rem;
+    color: v.$clr-secondary;
+
+}
+
+.home-heart:hover .home-span-heart{
+    max-height: 1.4rem;
+
+}
+
+.home-heart:hover .home-heart2{
+    transform: translateY(0);
+
+}
+
+
+/* Animation du coeur des pages de restaurant */
+
 .rpt-heart{
     position: relative;
     height: 2rem;

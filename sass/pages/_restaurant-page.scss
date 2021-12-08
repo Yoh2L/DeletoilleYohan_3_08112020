@@ -1,5 +1,9 @@
 @use '../utils/variables' as v;
 
+
+
+
+
 .restaurant-img-bg{
     object-fit: cover;
     height: 300px;
@@ -32,12 +36,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
     
-
-    @media screen and (min-width: 1024px) {
-        display: flex;
+    @media screen and (min-width: 1440px) {
         flex-direction: row;
-        justify-content: center;
+        
     }
 }
 
@@ -68,20 +71,24 @@
 
 
 .restaurant-page-entrees{
+
     width: 100%;
+    max-width: 380px;
     animation: 2s forwards ease-in-out SlideUp;
 }
 .restaurant-page-plats{
-    width: 100%;
     opacity: 0;
     animation: 2s forwards ease-in-out SlideUp;
     animation-delay: 0.5s;
+    width: 100%;
+    max-width: 380px;
 }
 .restaurant-page-desserts{
-    width: 100%;
     opacity: 0;
     animation: 2s forwards ease-in-out SlideUp;
     animation-delay: 1s;
+    width: 100%;
+    max-width: 380px;
 }
 
 @keyframes SlideUp {

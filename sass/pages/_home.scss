@@ -118,6 +118,10 @@
                 0 12px 12px rgba(0,0,0,0.08);
 }
 
+.goal-btn:hover .gl-btn-icon{
+    color: v.$clr-secondary;
+}
+
 .restaurants{
     background-color: v.$clr-grey1;
     padding: 2rem;
@@ -134,7 +138,7 @@
 
 }
 
-.restaurant-title{
+h2{
     font-family: "Roboto";
     font-weight: v.$clr-strong;
     font-size: 1.5rem;

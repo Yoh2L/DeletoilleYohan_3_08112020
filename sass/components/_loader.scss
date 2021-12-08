@@ -1,44 +1,99 @@
 @use '../utils/variables' as v;
 
 .loader{
+    display: flex;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     position: fixed;
     z-index: 1;
-    backdrop-filter: blur(1rem);
-    animation: transition 3s ease-in-out 3s forwards;
+    background-color: v.$clr-grey2;
+    animation: transition 3s ease-in-out 1s forwards,  size 1ms linear 3s forwards;
 }
 
 
 .loading-bar{
     position: absolute;
-    height: 20px;
-    width: 100%;
-    max-width: 200px;
-    overflow: hidden;
-    top: 50%;
+    height: 60px;
+    width: 530px;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+
+
+
+    p{
+        display: inline-block;
+        text-align: center;
+        font-size: 5rem;
+        font-family: "Shrikhand";
+        font-weight: v.$clr-medium;
+        transform: scale(.7);
+        color: v.$clr-grey3;
+    }
+
+    p:nth-child(1) {
+        animation: hover 1.5s ease-in-out infinite reverse;
+    }
+    p:nth-child(2) {
+        animation: hover 1.5s ease-in-out infinite reverse .125s;
+    }
+    p:nth-child(3) {
+        animation: hover 1.5s ease-in-out infinite reverse .25s;
+    }
+    p:nth-child(4) {
+        animation: hover 1.5s ease-in-out infinite reverse .375s;
+    }
+    p:nth-child(5) {
+        animation: hover 1.5s ease-in-out infinite reverse .5s;
+    }
+    p:nth-child(6) {
+        animation: hover 1.5s ease-in-out infinite reverse .625s;
+    }
+    p:nth-child(7) {
+        animation: hover 1.5s ease-in-out infinite reverse .75s;
+    }
+    p:nth-child(8) {
+        animation: hover 1.5s ease-in-out infinite reverse .875s;
+    }
 
 }
 
-.loading-bar-progress{
-    height: 100%;
-    width: 100%;
-    background: red;
-    animation: progress 2s ease-in-out;
-}
-
-@keyframes progress {
+@keyframes hover {
     0%{
-        width: 0%;
+        transform: scale(.7);
+        color: v.$clr-grey3;
+        -webkit-text-stroke: 2px gray;
     }
-    100%{
-        width: 100%;
+
+    20% {
+        transform: scale(1);
+        color: v.$clr-secondary;
+        -webkit-text-stroke: 3px v.$clr-secondary;
+        filter: drop-shadow(0 0 1px black)
+                drop-shadow(0 0 1px black)
+                drop-shadow(0 0 3px v.$clr-secondary)
+                drop-shadow(0 0 5px v.$clr-secondary)
+    }
+
+    40% {
+        transform: scale(1);
+        color: v.$clr-green1;
+        -webkit-text-stroke: 3px v.$clr-green1;
+        filter: drop-shadow(0 0 1px black)
+                drop-shadow(0 0 1px black)
+                drop-shadow(0 0 3px v.$clr-green1)
+                drop-shadow(0 0 5px v.$clr-green1)
+    }
+
+    80% {
+        transform: scale(.7);
+        color: v.$clr-primary;
+        -webkit-text-stroke: 2px gray;
     }
 }
+
 
 @keyframes transition {
 
@@ -46,4 +101,12 @@
         z-index: 0;
         opacity: 0;
     }
+}
+
+@keyframes size {
+    100%{
+        width: 0;
+        height: 0;
+    }
+
 }

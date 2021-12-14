@@ -21,6 +21,12 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @media screen and (max-width: 600px) {
+        width: 300px;
+        left: 60%;
+        
+    }
+
 
 
     p{
@@ -31,6 +37,10 @@
         font-weight: v.$clr-medium;
         transform: scale(.7);
         color: v.$clr-grey3;
+
+        @media screen and (max-width: 475px) {
+            font-size:  2rem;
+        }
     }
 
     p:nth-child(1) {

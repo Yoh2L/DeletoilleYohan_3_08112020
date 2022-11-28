@@ -2,7 +2,7 @@
 
 Dynamisez une page web avec des animations CSS
 
-Ce projet est développer en web statique (html / css) uniquement.
+Ce projet est développé en web statique (html / css) uniquement.
 
 Compétences évaluées :
 - Mettre en oeuvre des effets CSS graphiques avancés ;
